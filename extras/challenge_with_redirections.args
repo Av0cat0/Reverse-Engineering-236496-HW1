@@ -1,0 +1,9 @@
+gcc -c -masm=intel -m32 challenge.S -o challenge.o
+objcopy -O binary challenge.o challenge.bin
+type challenge.bin find_function.bin > challenge1.bin
+dir challenge1.bin
+type PE.bin challenge1.bin > challenge.exe
+
+
+
+
